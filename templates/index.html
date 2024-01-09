@@ -1,0 +1,23 @@
+<!-- index.html -->
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h1>Predict FOMO</h1>
+    
+    <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="jam_dalam_seminggu">Dalam seminggu berapa banyak kamu menghabiskan waktumu dengan gadget mu ? (perhari x 7)</label>
+                <input type="number" class="form-control" id="jam_dalam_seminggu" name="jam_dalam_seminggu" required>
+            </div>
+            <div class="form-group">
+                <label for="X_Gadget">Dalam persentase kamu menghabiskan waktumu dengan gadget dan sosmedmu (tiktokan terus):</label>
+                <input type="number" class="form-control" id="X_Gadget" name="X_Gadget" required>
+            </div>
+            <div class="form-group">
+                <label for="Y_Fomo">Dalam persentase kamu seberapa mengikuti trensaat ini :</label>
+                <input type="number" class="form-control" id="Y_Fomo" name="Y_Fomo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>       
+</div>
+{% endblock %}

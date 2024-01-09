@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>K-Means Iterations</h1>
+    
+    <div class="mt-3">
+        <button type="button" class="btn btn-primary" onclick="showIterations()">Show Iterations</button>
+    </div>
+</div>
+
+<script>
+    function showIterations() {
+        alert("Number of iterations: {{ iterations }}");
+    }
+</script>
+{% endblock %}

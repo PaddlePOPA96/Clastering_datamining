@@ -1,0 +1,9 @@
+<!-- result.html -->
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h1>{{ title }}</h1>
+    <p>You are {{ 'Sepertinya kamu tidak FOMO.' if cluster == 0 else 'Sepertinya Kamu Fomo deh.' }}</p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Back to Home</a>
+</div>
+{% endblock %}
