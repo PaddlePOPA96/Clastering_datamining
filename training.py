@@ -40,7 +40,7 @@ plt.xlabel('PCA Feature 1')
 plt.ylabel('PCA Feature 2')
 
 # Save the plot as a file
-plt.savefig('kmeans_clusters.png')
+plt.savefig('static/kmeans_clusters.png')
 
 # Save the scaler and model for later use
 dump(scaler, 'scaler.joblib')
