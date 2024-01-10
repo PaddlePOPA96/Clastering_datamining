@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h1>KMeans Clustering Diagram</h1>
+    <img src="{{ url_for('static', filename='../kmeans_clusters.png') }}" alt="KMeans Clustering" class="img-fluid">
+</div>
+{% endblock %}

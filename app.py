@@ -63,6 +63,11 @@ def dataset():
     df_display = df[['Nama', 'Jenis Kelamin', 'Asal daerah', 'Usia', 'jam_dalam_seminggu', 'Sosial Media yang anda gunakan ', 'X_Gadget', 'Y_Fomo', 'Fomo']]
     return render_template('dataset.html', dataset=df_display.to_html(classes='table table-responsive table-striped', index=False, escape=False))
 
+@app.route('/diagram')
+def diagram():
+    # Assuming you have saved the diagram image as 'kmeans_clusters.png' in a 'static' directory
+    return render_template('diagram.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
